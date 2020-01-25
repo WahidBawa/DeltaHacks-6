@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Buddy',
+      debugShowCheckedModeBanner: false,
       home: Home(),
     );
   }
