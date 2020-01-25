@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'home_widget.dart';
 
 void main() => runApp(MyApp());
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Buddy',
+      home: Home(),
+
+    );
+  }
+}
+
+/*
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -20,7 +33,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Buddy'),
     );
   }
 }
@@ -109,3 +122,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
