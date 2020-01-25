@@ -18,13 +18,22 @@ class MyApp extends StatelessWidget {
 }
 
 
-void getStats() async {
+Future<List<List<FitData>>> getStats() async {
   //DISPLAY THIS STAT
-  final results = await FitKit.read(
-    DataType.HEART_RATE,
+  List<List<FitData>> stats = [];
+  List<DataType> toTrack = [DataType.HEART_RATE, DataType.ENERGY, DataType.STEP_COUNT, DataType.DISTANCE];
+
+  for (var stat in toTrack) {
+    stats.add(await FitKit.read(
+      stat,
       dateFrom: DateTime.now().subtract(Duration(days: 5)),
       dateTo: DateTime.now(),
-  );
+      )
+    );
+  }
+
+  return stats;
+
 }
 
 
