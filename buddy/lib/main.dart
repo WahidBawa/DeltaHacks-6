@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_widget.dart';
+import 'package:fit_kit/fit_kit.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,15 @@ class MyApp extends StatelessWidget {
 
 }
 
+
+void getStats() async {
+  //DISPLAY THIS STAT
+  final results = await FitKit.read(
+    DataType.HEART_RATE,
+      dateFrom: DateTime.now().subtract(Duration(days: 5)),
+      dateTo: DateTime.now(),
+  );
+}
 
 
 /*
