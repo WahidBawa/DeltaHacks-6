@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
 }
 void makeRandom(){
   var num = new Random();
-  rand = num.nextInt(600);
+  rand = num.nextInt(599) + 1 ;
 }
 
 int getVal(){
