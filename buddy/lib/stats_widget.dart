@@ -1,9 +1,12 @@
+import 'package:buddy/dogStatus.dart';
 import 'package:buddy/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class StatsWidget extends StatelessWidget {
 
+
+  var dogBuddy = new dogStatus(2, 5);
   @override
   Widget build(BuildContext context) {
     // main frame within navbars
@@ -12,6 +15,12 @@ class StatsWidget extends StatelessWidget {
 
         child: Column(
           children: <Widget>[
+
+
+            Center(
+              child: dogBuddy.emoteBubble()
+              ),
+
             // WIDGET 1
             Card(
               margin: const EdgeInsets.all(30.0),
@@ -32,6 +41,7 @@ class StatsWidget extends StatelessWidget {
                         )
                     )
                 ),
+
               ),
             ),
 
@@ -67,6 +77,3 @@ class StatsWidget extends StatelessWidget {
 
 }
 
- dogStatus(){
-
-}
