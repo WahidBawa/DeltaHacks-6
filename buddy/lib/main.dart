@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'home_widget.dart';
 import 'package:fit_kit/fit_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'dart:developer';
 
 
 void main() => runApp(MyApp());
+var record;
 
 class MyApp extends StatelessWidget {
   @override
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
-  final record = Record.fromSnapshot(data);
+  record = Record.fromSnapshot(data);
 
   return Padding(
     key: ValueKey(record.day),
@@ -49,6 +49,18 @@ class Record {
   final String stepCount;
   final DocumentReference reference;
 
+  int get getEnergy {
+    return int.parse(day);
+  }
+
+  int get getStepCount {
+    return int.parse(stepCount);
+  }
+
+  int get getDistance {
+    return int.parse(distance);
+  }
+
   Record.fromMap(Map<String, dynamic> map, {this.reference})
       : assert(map['day'] != null),
         assert(map['heartrate'] != null),
@@ -61,12 +73,17 @@ class Record {
         energy = map['energy'],
         stepCount = map['stepCount'];
 
+
   Record.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
 
   @override
   String toString() => "Record<$day:$heartRate:$stepCount:$distance:$energy>";
 }
+int getVal(){
+  return ((1 + record.getEnergy()) + (record.getStepCount() / 10) + (record.getDistance() / 100)).round();
+}
+
 Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
   return ListView(
     padding: const EdgeInsets.only(top: 20.0),
