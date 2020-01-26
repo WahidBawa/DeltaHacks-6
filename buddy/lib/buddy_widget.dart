@@ -5,8 +5,9 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:buddy/dogStatus.dart';
 
 class BuddyWidget extends StatelessWidget {
-//  var dogBuddy = new dogStatus(getVal() <= 200 ? 0 : (getVal() <= 400 ? 1 : 2), getVal() % 10);
-  var dogBuddy = new dogStatus(2, 5);
+  var val = makeRandom();
+  var dogBuddy = new dogStatus(getVal() <= 200 ? 0 : (getVal() <= 400 ? 1 : 2), (getVal() / 100).round() + 1);
+//  var dogBuddy = new dogStatus(2, 5);
 
   @override
   Widget build(BuildContext context) {
