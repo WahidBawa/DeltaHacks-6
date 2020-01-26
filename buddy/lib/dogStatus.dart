@@ -12,27 +12,27 @@ class dogStatus {
   Widget emoteBubble() {
     switch(emote){
       case 0:{ // sad -> anger
-        Image.asset('assets/img/emote_faceAngry.png');
+        return Image.asset('assets/img/emote_faceAngry.png');
       }
       break;
       
       case 1:{ // sad -> dazed/ confused
-        Image.asset('assets/img/emote_swirl.png');
+        return Image.asset('assets/img/emote_swirl.png');
       }
       break;
 
       case 2:{ // neutral -> sleep
-        Image.asset('assets/img/emote_sleeps.png');
+        return Image.asset('assets/img/emote_sleeps.png');
       }
       break;
 
       case 3:{ // neutral -> dots
-        Image.asset('assets/img/emote_dots3.png');
+        return Image.asset('assets/img/emote_dots3.png');
       }
       break;
 
       case 4:{ // happy -> happy
-        Image.asset('assets/img/emote_faceHappy.png');
+        return Image.asset('assets/img/emote_faceHappy.png');
       }
       break;
 
@@ -58,7 +58,7 @@ class dogStatus {
 
       case 1:
         {
-          Image.asset('assets/img/idle-neutral.gif');
+          return Image.asset('assets/img/idle-neutral.gif');
         }
         break;
 
