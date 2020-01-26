@@ -2,8 +2,10 @@ import 'package:buddy/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:buddy/dogStatus.dart';
 
 class BuddyWidget extends StatelessWidget {
+  var dogBuddy = new dogStatus(0, 0);
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +16,10 @@ class BuddyWidget extends StatelessWidget {
         child: Column(
 
             children: <Widget>[
+
+              Center(
+                  child: dogBuddy.emoteBubble()
+              ),
               Container(
                 margin: EdgeInsets.all(20.0),
                   child:
