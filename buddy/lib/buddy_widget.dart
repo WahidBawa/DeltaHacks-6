@@ -47,7 +47,7 @@ class BuddyWidget extends StatelessWidget {
               Center(
                   child: Column(
                     children: <Widget>[
-                      Image.asset("assets/img/idle-happy.gif", height: 200,),
+                      dogBuddy.generalAnimation(),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         child: new LinearPercentIndicator(

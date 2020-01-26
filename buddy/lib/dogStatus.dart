@@ -52,19 +52,19 @@ class dogStatus {
     switch(generalState) {
       case 0:
         {
-          return Image.asset('assets/img/idle-sad.gif');
+          return Image.asset('assets/img/idle-sad.gif', height: 200,);
         }
         break;
 
       case 1:
         {
-          return Image.asset('assets/img/idle-neutral.gif');
+          return Image.asset('assets/img/idle-neutral.gif', height: 200,);
         }
         break;
 
       case 2:
         {
-          return  Image.asset('assets/img/idle-happy.gif');
+          return  Image.asset('assets/img/idle-happy.gif', height: 200,);
         }
         break;
 
