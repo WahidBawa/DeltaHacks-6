@@ -8,6 +8,7 @@ class StatsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     // main frame within navbars
     return Container(
+        color: Color.fromRGBO(104, 204, 204, 0.4),
 
         child: Column(
           children: <Widget>[
