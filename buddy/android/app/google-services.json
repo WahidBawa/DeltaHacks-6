@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "656217838669",
+    "firebase_url": "https://deltahacks-6.firebaseio.com",
+    "project_id": "deltahacks-6",
+    "storage_bucket": "deltahacks-6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656217838669:android:38c88641d28fe814983804",
+        "android_client_info": {
+          "package_name": "com.uwinsome.buddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656217838669-7jdviugqd0ll0vhcccf26c67ei2fm9a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ1NqJ14yyT0iH-W5agzXrOiBGiZrltpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656217838669-7jdviugqd0ll0vhcccf26c67ei2fm9a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
