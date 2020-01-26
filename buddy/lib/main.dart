@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_widget.dart';
+import 'package:fit_kit/fit_kit.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,34 @@ class MyApp extends StatelessWidget {
 
 }
 
+
+Future<List<List<FitData>>> getStats() async {
+  List<List<FitData>> stats = [];
+  List<DataType> toTrack = [DataType.HEART_RATE, DataType.ENERGY, DataType.STEP_COUNT, DataType.DISTANCE];
+  for (var stat in toTrack)
+    {
+      stats.add(await FitKit.read(
+        stat,
+        dateFrom: DateTime.now().subtract(Duration(days: 5)),
+        dateTo: DateTime.now(),
+      )
+      );
+  }
+  return stats;
+}
+
+String getData(Future<List<List<FitData>>> data) {
+  String res = "Data: ";
+  data.then((val) {
+    List<List<FitData>> d = val;
+    for (List<FitData> list in d) {
+      for (FitData item in list) {
+        res += item.toString();
+      }
+    }
+  });
+  return res;
+}
 
 
 /*
