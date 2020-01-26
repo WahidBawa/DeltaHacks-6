@@ -57,6 +57,9 @@ class BuddyWidget extends StatelessWidget {
 
         ],
       )
+
+      //child: Text(getData((getStats()))),
+
     );
   }
 }
