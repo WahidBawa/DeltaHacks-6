@@ -5,7 +5,8 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:buddy/dogStatus.dart';
 
 class BuddyWidget extends StatelessWidget {
-  var dogBuddy = new dogStatus(1, 2);
+//  var dogBuddy = new dogStatus(getVal() <= 200 ? 0 : (getVal() <= 400 ? 1 : 2), getVal() % 10);
+  var dogBuddy = new dogStatus(2, 5);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class BuddyWidget extends StatelessWidget {
                                   * change emotes here
                                   ********************/
                                   dogBuddy.emoteBubble(),
-                                  Text("You're acheving your goals!"),
+                                  dogBuddy.msg(),
                                 ],
                               )
                           )
@@ -47,13 +48,14 @@ class BuddyWidget extends StatelessWidget {
               Center(
                   child: Column(
                     children: <Widget>[
-                      Image.asset("assets/img/idle-happy.gif", height: 200,),
+                      dogBuddy.generalAnimation(),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         child: new LinearPercentIndicator(
                           padding: const EdgeInsets.all(70.0),
                           lineHeight: 14.0,
-                          percent: 0.7,
+                          percent: 0.7, // CHANGED
+//                          percent: getVal() / 600,
                           backgroundColor: Colors.grey,
                           progressColor: Colors.green,
                         ),

@@ -1,6 +1,5 @@
 import 'package:buddy/main.dart';
 import 'package:flutter/material.dart';
-import 'placeholder_widget.dart';
 import 'buddy_widget.dart';
 import 'stats_widget.dart';
 
