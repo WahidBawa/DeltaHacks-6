@@ -1,3 +1,4 @@
+import 'package:buddy/main.dart';
 import 'package:flutter/material.dart';
 import 'placeholder_widget.dart';
 import 'buddy_widget.dart';
@@ -15,8 +16,8 @@ class _HomeState extends State<Home> {
 
   int _currentIndex = 0;
   final List<Widget> _children = [
-    StatsWidget(),
     BuddyWidget(),
+    StatsWidget(),
 
   ];
 
@@ -26,6 +27,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Buddy'),
+//        title: Text(getVal().toString()),
         backgroundColor: Color(0xFFFF1744),
       ),
       body: _children[_currentIndex], // new
