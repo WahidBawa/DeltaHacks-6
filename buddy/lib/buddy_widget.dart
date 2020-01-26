@@ -5,7 +5,7 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:buddy/dogStatus.dart';
 
 class BuddyWidget extends StatelessWidget {
-  var dogBuddy = new dogStatus(0, 0);
+  var dogBuddy = new dogStatus(1, 2);
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,6 @@ class BuddyWidget extends StatelessWidget {
         child: Column(
 
             children: <Widget>[
-
-              Center(
-                  child: dogBuddy.emoteBubble()
-              ),
               Container(
                 margin: EdgeInsets.all(20.0),
                   child:
@@ -38,7 +34,8 @@ class BuddyWidget extends StatelessWidget {
                                   /*******************
                                   * change emotes here
                                   ********************/
-                                  Text('Just Vibin\'', style: TextStyle(fontSize: 30)),
+                                  dogBuddy.emoteBubble(),
+                                  Text("You're acheving your goals!"),
                                 ],
                               )
                           )
