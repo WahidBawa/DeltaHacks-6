@@ -2,6 +2,8 @@ import 'package:buddy/main.dart';
 import 'package:flutter/material.dart';
 import 'buddy_widget.dart';
 import 'stats_widget.dart';
+import 'records_widget.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -17,7 +19,7 @@ class _HomeState extends State<Home> {
   final List<Widget> _children = [
     BuddyWidget(),
     StatsWidget(),
-
+    ItemsList(),
   ];
 
 
