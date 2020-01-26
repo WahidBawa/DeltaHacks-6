@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class StatsWidget extends StatelessWidget {
+
+
+
   @override
   Widget build(BuildContext context) {
     // main frame within navbars
@@ -12,8 +15,9 @@ class StatsWidget extends StatelessWidget {
 
           children: <Widget>[
             Center(
-              child: Text('Just Vibin', style: TextStyle(fontSize: 35))
+              child: Text('Just Vibin\'', style: TextStyle(fontSize: 35))
               ),
+
             Center(
               child: Image.asset("assets/img/idle-happy.gif")
               ),
@@ -21,10 +25,17 @@ class StatsWidget extends StatelessWidget {
             Expanded(
               child: Image.asset('assets/img/greenbar.png')
                )
-              ]
+
+          ]
+              
         )
+
     );
 
   }
+
+}
+
+ dogStatus(){
 
 }
