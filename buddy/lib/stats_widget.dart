@@ -170,7 +170,7 @@ class StatsWidget extends StatelessWidget {
                 splashColor: Colors.blue.withAlpha(30),
                 child: Container(
                     width: MediaQuery.of(context).size.width,
-                    height: 200,
+                    height: 220,
                     color: Color.fromRGBO(230, 230, 230, 0.4),
                     child: Padding(
                         padding: const EdgeInsets.all(20.0),
