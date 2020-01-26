@@ -77,4 +77,33 @@ class dogStatus {
     }
   }
 
+  Widget msg() {
+    switch(generalState) {
+      case 0:
+        {
+          return Text("I don't feel so good Mr. Lark...");
+        }
+        break;
+
+      case 1:
+        {
+          return Text("We just vibin'");
+        }
+        break;
+
+      case 2:
+        {
+          return Text("I'm feeling good; and that means you are too!");
+        }
+        break;
+
+      default:
+        {
+          print(
+              "There was an error in the generalAnimation method of the dogStatus class");
+        }
+        break;
+    }
+  }
+
 }

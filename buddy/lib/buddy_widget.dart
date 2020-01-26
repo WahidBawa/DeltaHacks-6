@@ -6,7 +6,7 @@ import 'package:buddy/dogStatus.dart';
 
 class BuddyWidget extends StatelessWidget {
 //  var dogBuddy = new dogStatus(getVal() <= 200 ? 0 : (getVal() <= 400 ? 1 : 2), getVal() % 10);
-  var dogBuddy = new dogStatus(1, 2);
+  var dogBuddy = new dogStatus(2, 5);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class BuddyWidget extends StatelessWidget {
                                   * change emotes here
                                   ********************/
                                   dogBuddy.emoteBubble(),
-                                  Text("You're acheving your goals!"),
+                                  dogBuddy.msg(),
                                 ],
                               )
                           )
