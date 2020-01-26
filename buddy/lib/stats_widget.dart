@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class StatsWidget extends StatelessWidget {
+
+
+
   @override
   Widget build(BuildContext context) {
     // main frame within navbars
@@ -30,5 +33,9 @@ class StatsWidget extends StatelessWidget {
     );
 
   }
+
+}
+
+ dogStatus(){
 
 }
