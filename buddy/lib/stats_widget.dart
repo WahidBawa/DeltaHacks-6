@@ -4,35 +4,65 @@ import 'package:flutter/rendering.dart';
 
 class StatsWidget extends StatelessWidget {
 
-
-
   @override
   Widget build(BuildContext context) {
     // main frame within navbars
     return Container(
-      // this column stores in order: The feeling text, the character, and the feeling meter
+
         child: Column(
-
           children: <Widget>[
-            Center(
-              child: Text('Just Vibin\'', style: TextStyle(fontSize: 35))
+            // WIDGET 1
+            Card(
+              margin: const EdgeInsets.all(30.0),
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(30),
+                child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 100,
+                    color: Color.fromRGBO(230, 230, 230, 0.4),
+                    child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          children: <Widget>[
+                            Text("Welcome Harshdip"),
+                            Text("Your weight: xx"),
+                            Text("Your height: xx"),
+                          ],
+                        )
+                    )
+                ),
               ),
+            ),
 
-            Center(
-              child: Image.asset("assets/img/idle-happy.gif")
+            // WIDGET 2
+            Card(
+              margin: const EdgeInsets.all(20.0),
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(30),
+                child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 100,
+                    color: Color.fromRGBO(230, 230, 230, 0.4),
+                    child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          children: <Widget>[
+                            Text("this is ur steps graph data"),
+                          ],
+                        )
+                    )
+                ),
               ),
+            ),
 
-            Expanded(
-              child: Image.asset('assets/img/greenbar.png')
-               )
-
-          ]
-              
+          ],
         )
 
-    );
+      //child: Text(getData((getStats()))),
 
+    );
   }
+
 
 }
 

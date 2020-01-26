@@ -16,8 +16,8 @@ class _HomeState extends State<Home> {
 
   int _currentIndex = 0;
   final List<Widget> _children = [
-    StatsWidget(),
     BuddyWidget(),
+    StatsWidget(),
 
   ];
 
