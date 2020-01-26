@@ -51,24 +51,26 @@ class BuddyWidget extends StatelessWidget {
                       dogBuddy.generalAnimation(),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        child: new LinearPercentIndicator(
                           padding: const EdgeInsets.all(70.0),
-                          lineHeight: 14.0,
-                          percent: 0.7, // CHANGED
-//                          percent: getVal() / 600,
-                          backgroundColor: Colors.grey,
-                          progressColor: Colors.green,
-                        ),
+                        child: new Column(
+
+                          children: <Widget>[
+                            Text("Your today's goal progress"),
+                              new LinearPercentIndicator(
+                                padding: const EdgeInsets.all(20.0),
+                              lineHeight: 14.0,
+                              percent: 0.7, // CHANGED
+                              backgroundColor: Colors.grey,
+                              progressColor: Colors.green,
+                              ),
+                          ],
+                          )
                       ),
                     ],
                   )
               ),
-
             ]
-
         )
-
     );
-
   }
 }
