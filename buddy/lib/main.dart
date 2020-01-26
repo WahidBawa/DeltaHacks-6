@@ -1,4 +1,3 @@
-import 'package:buddy/placeholder_widget.dart';
 import 'package:flutter/material.dart';
 import 'home_widget.dart';
 import 'package:fit_kit/fit_kit.dart';
