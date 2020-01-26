@@ -1,10 +1,11 @@
+import 'package:buddy/dogStatus.dart';
 import 'package:buddy/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class StatsWidget extends StatelessWidget {
 
-
+  var dogBuddy = new dogStatus(2, 5);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +15,9 @@ class StatsWidget extends StatelessWidget {
         child: Column(
 
           children: <Widget>[
+
             Center(
-              child: Text('Just Vibin\'', style: TextStyle(fontSize: 35))
+              child: dogBuddy.emoteBubble()
               ),
 
             Center(
@@ -36,6 +38,3 @@ class StatsWidget extends StatelessWidget {
 
 }
 
- dogStatus(){
-
-}
