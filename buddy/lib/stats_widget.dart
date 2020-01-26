@@ -5,7 +5,7 @@ import 'package:flutter/rendering.dart';
 
 class StatsWidget extends StatelessWidget {
 
-  var dogBuddy = new dogStatus(2, 5);
+  var dogBuddy = new dogStatus(0, 2);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class StatsWidget extends StatelessWidget {
               ),
 
             Center(
-              child: Image.asset("assets/img/idle-happy.gif")
+              child: dogBuddy.generalAnimation()
               ),
 
             Expanded(
